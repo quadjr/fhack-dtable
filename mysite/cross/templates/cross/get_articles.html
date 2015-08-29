@@ -1,0 +1,9 @@
+{% if image_urls %}
+
+{% for image_url in image_urls %}
+<img src={{image_url}} width='375'>
+{% endfor %}o
+
+{% else %}
+<p> No imags are available </p>
+{% endif %}

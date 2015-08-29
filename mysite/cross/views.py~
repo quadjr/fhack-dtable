@@ -1,0 +1,22 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+import urllib
+import urllib2
+
+# 
+password_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm()
+password_mgr.add_password(None, 'http://fashionhack.jp/api/', 'tfhjp', 'tanoshiine')
+
+# 
+handler = urllib2.HTTPBasicAuthHandler(password_mgr)
+opener = urllib2.build_opener(handler)
+urllib2.install_opener(opener)
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
+
+def get_articles(request, scene):
+    
+    f = urllib2.urlopen("http://fashionhack.jp/api/search.php?keyword="+urllib.quote(scene))
+    #return HttpResponse(f.open())

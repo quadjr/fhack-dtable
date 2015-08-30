@@ -5,8 +5,17 @@ html {
 }
 
 .body_with_header {
-  margin-top: 60px;
+  margin-top: 88px;
   margin-bottom: 60px;
+}
+
+.body_with_header_room {
+  margin-top: 38px;
+  margin-bottom: 60px;
+}
+
+.body_with_header_article {
+  margin-top: 55px;
 }
 
 .body_without_header {
@@ -16,31 +25,55 @@ html {
 .header {
   position: fixed;
   top: 0px;
+  margin: 0px;
   width: 100%;
-  height: 60px;
-  background-color: #808080;
+  height: 88px;
+  background-color: #c8cbcf;
+  z-index: 1000;
+}
+
+.room_header {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 38px;
+  background-color: #c8cbcf;
+  z-index: 1000;
+}
+
+
+.back_header {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 55px;
+  background-color: #485360;
   z-index: 1000;
 }
 
 #type_select {
   width: 20%;
-  height: 60px;
+  margin-top:34px;
+  height: 3px;
 	transition-property: transform;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
 	transform: translate(0, 0);
-  background-color : #FFFFFF;
+  background-color : #485360;
   z-index: 1001;
 }
 
 #room_select {
   width: 33%;
-  height: 60px;
+  margin-top:34px;
+  height: 3px;
 	transition-property: transform;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
 	transform: translate(0, 0);
-  background-color : #FFFFFF;
+  background-color : #485360;
   z-index: 1001;
 }
 
@@ -50,12 +83,12 @@ html {
 }
 
 .types-ul {
-  margin-top: -60px;
+  margin-top: -40px;
    padding: 0;
    display: table;
   table-layout: fixed;
   text-align: center;
-  height:60px;
+  height:40px;
   width:100%;
   z-index: 1002;
 }
@@ -64,7 +97,9 @@ html {
   display: table-cell;
   vertical-align: middle;
   z-index: 1003;
+  color:#485360;
 }
+
 
 .contents{
 	width:100vw;
@@ -115,7 +150,7 @@ html {
 .item_img {
   width: 100%;
   height: auto;
-  border: solid 1px #000000;
+  border: solid 1px #d1d4d7;
 }
 
 .item_title {
@@ -134,7 +169,7 @@ html {
   left: 0px;
   width: 100%;
   height: 60px;
-  background-color: #AAAAAA;
+  background-color: #485360;
   z-index: 1000;
 }
 
@@ -159,9 +194,36 @@ html {
   vertical-align: middle;
 }
 
+.item-ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+    background-color: #485360;
+}
+
+.item-ul li {
+  font-size:0px;
+  color:#000000;
+  font-weight:bolder;
+  width:100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.itemButton{
+  width: 30px;
+  height: auto;
+  margin: auto;
+}
+
 .footerButton{
-  width: 40px;
-  height:40px;
+  width: 80px;
+  height: auto;
   margin: auto;
 }
 
@@ -179,15 +241,15 @@ html {
 .items_select {
 	width:100%;
 	margin:0;
-	height: 66px;
+	height: 76px;
 	overflow-x: scroll;
 	white-space: nowrap;
 	padding: 3px;
 }
 
 .items_select img {
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	border: solid 1px #000000;
 }
 

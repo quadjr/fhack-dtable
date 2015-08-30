@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css"rel="stylesheet">
+   </head>
+<body>
+	<div class="search_header">
+		<div class="search_condition">
+		色:黒 価格:5,000〜10,000円<br>アイテム：スカート
+		<div onClick="changeCondition()" class="btn button-default">条件変更</button>
+		</div>
+		<div class ="input_condition">
+			色:<select name="color_condition">
+				<option value="Black">黒</option>
+				<option value="White">白</option>
+				<option value="Red">赤</option>
+				<option value="Blue">青</option>
+			</select><br>
+			価格:<select name="color_condition">
+				<option value="1000">1,000~3,000円</option>
+				<option value="3000">3,000~5,000円</option>
+				<option value="5000">5,000~10,000円</option>
+				<option value="10000">10,000~30,000円</option>
+				<option value="30000">30,000~100,000円</option>
+				<option value="100000">100,000~円</option>
+			</select><br>
+			アイテム:<select name="color_condition">
+				<option value="0">スカート</option>
+				<option value="1">スカート</option>
+				<option value="2">スカート</option>
+			</select><br>
+		<div onClick="changeCondition()" class="btn button-default">決定</div>
+		</div>
+	</div>
+	  <table class="artile_list">
+	    <tbody>
+	        <tr>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	        </tr>	
+	        <tr>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	        </tr>
+	        <tr>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	        </tr>
+	        <tr>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	            <td><div class="item"><a href="item.html" target="_parent"><img src="img/item_sample.jpg" class="item_img"><div class="item_title">アイテム5</div></a></div></td>
+	        </tr>
+	    </tbody>
+	</table>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script id='code_1'>
+	     $(".input_condition").hide();
+        function changeCondition() {
+		        $(".input_condition").toggle("fast");
+        }
+    </script>
+
+</body>
+</html>
